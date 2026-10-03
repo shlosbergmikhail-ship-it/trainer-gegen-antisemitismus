@@ -1,4 +1,4 @@
-Trainer gegen Antisemitismus · Beta 0.23 · App-Paket
+Trainer gegen Antisemitismus · Beta 0.24 · App-Paket
 
 Inhalt
   index.html            der Trainer

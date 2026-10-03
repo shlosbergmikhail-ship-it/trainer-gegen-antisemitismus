@@ -540,7 +540,7 @@ html[data-theme="light"] .boss-options button.selected{background:var(--accent);
         <div class="brand-mark">!</div>
         <div>
           <div class="brand-title">Gegen Antisemitismus</div>
-          <div class="brand-subtitle">TRAINER · BETA 0.23</div>
+          <div class="brand-subtitle" id="brandVersion">TRAINER · BETA 0.24</div>
         </div>
       </div>
 
@@ -863,10 +863,12 @@ KÄMPFE</span></div>
         <div class="source-note panel"><strong>Methodenhinweis:</strong> Institutionelle Quellen sind nicht „neutral, weil Institution“. Sie eignen sich für unterschiedliche Zwecke. Der Trainer soll deshalb kennzeichnen, ob ein Link den <em>Wortlaut</em>, einen <em>zeitgenössischen Befund</em>, eine <em>Definition</em> oder eine <em>spätere Einordnung</em> liefert.</div>
       </section>
 
-      <footer class="footer"><span>Beta 0.23 · spielbare Produktbeta</span><span>Klare Haltung · faire Unterscheidung · geprüfte Quellen</span></footer>
+      <footer class="footer"><span id="footerVersion">Beta 0.24 · Stand 03.10.2026</span><span>Klare Haltung · faire Unterscheidung · geprüfte Quellen</span></footer>
     </main>
   </div>
   <script>
+/* Version und Datum stehen nur hier. Bei einer neuen Fassung diese zwei Werte ändern – und in sw.js die Nummer hinter CACHE. */
+const APP_VERSION='0.24', APP_DATE='03.10.2026';
 const state = {
   screen:'home', xp:1240, trapIndex:0, mythIndex:0, prejudiceIndex:0, sloganIndex:0, formIndex:0, decideIndex:0, factIndex:0, rhetoricIndex:0,
   termIndex:0, sourceQuizIndex:0, accusationIndex:0,
@@ -1968,6 +1970,8 @@ $('#scrim')?.addEventListener('click',()=>$('#sidebar')?.classList.remove('open'
 $('#sidebarClose')?.addEventListener('click',()=>$('#sidebar')?.classList.remove('open'));
 showTier(save.tier||'erkennen');updateAnalyzeBtn();refreshContinue();
 
+if($('#brandVersion'))$('#brandVersion').textContent='TRAINER · BETA '+APP_VERSION;
+if($('#footerVersion'))$('#footerVersion').textContent='Beta '+APP_VERSION+' · Stand '+APP_DATE;
 function applyTheme(t){document.documentElement.setAttribute('data-theme',t);const b=$('#themeBtn');if(b)b.textContent=t==='light'?'Dunkle Ansicht':'Helle Ansicht';const m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f3f5f8':'#071019');}
 applyTheme(document.documentElement.getAttribute('data-theme')||'dark');
 $('#themeBtn')?.addEventListener('click',()=>{const t=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';try{localStorage.setItem('trainerTheme',t);}catch(e){}applyTheme(t);});
