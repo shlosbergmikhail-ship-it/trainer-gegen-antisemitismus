@@ -1,0 +1,20 @@
+Trainer gegen Antisemitismus · Beta 0.22 · App-Paket
+
+Inhalt
+  index.html            der Trainer
+  manifest.webmanifest  Name, Farben und Icons der App
+  sw.js                 sorgt dafür, dass die App auch ohne Netz startet
+  icons/                App-Symbole
+
+So wird daraus eine installierbare App
+  1. Den ganzen Ordner auf einen Webspace mit https hochladen
+     (zum Beispiel Netlify, GitHub Pages oder der eigene Server).
+  2. Die Adresse auf dem Handy öffnen.
+     Android/Chrome: Menü > "App installieren".
+     iPhone/Safari:  Teilen > "Zum Home-Bildschirm".
+
+Wichtig
+  - Per Doppelklick geöffnet läuft index.html als normale Seite;
+    installieren lässt sie sich nur über eine https-Adresse.
+  - Der Fortschritt wird nur auf dem jeweiligen Gerät gespeichert.
+  - Bei jeder neuen Version in sw.js die Nummer hinter CACHE erhöhen.
