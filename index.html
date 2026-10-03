@@ -12,7 +12,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="description" content="Trainer gegen Antisemitismus: Vorurteile, Mythen und Parolen erkennen, klar und fair widersprechen, Hintergründe zum Nahostkonflikt kennen." />
   <title>Trainer gegen Antisemitismus</title>
-  <script>(function(){var t=null;try{t=localStorage.getItem("trainerTheme")}catch(e){}if(!t)t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
+  <script>(function(){var t=null;try{t=localStorage.getItem("trainerTheme")}catch(e){}if(t!=="light")t="dark";document.documentElement.setAttribute("data-theme",t);})();</script>
   <style>
 :root{
   --bg:#071019;--bg2:#0b1520;--panel:#101b28;--panel2:#0d1722;--line:#243242;
@@ -147,7 +147,7 @@ a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}.sour
 #sloganFeedback .memory-line{margin-bottom:4px}
 @media(max-width:1050px){.trap-buttons.three{grid-template-columns:1fr}}
 
-/* Beta 0.22 · drei Stufen */
+/* Beta 0.23 · drei Stufen */
 .tier-head{margin:30px 0 12px}
 .tier-head:first-of-type{margin-top:0}
 .tier-head h3{font-size:20px;letter-spacing:-.02em;margin:6px 0 0}
@@ -166,7 +166,7 @@ a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}.sour
 .link-box span{color:var(--accent)}
 .timeline-tabs{margin:0 0 14px}
 
-/* Beta 0.22 · entschlackt */
+/* Beta 0.23 · entschlackt */
 .hero{grid-template-columns:1fr;min-height:0}
 .hero-orbit{display:none}
 .hero h2{font-size:clamp(30px,4vw,46px);line-height:1.04;letter-spacing:-.04em;margin:10px 0 14px}
@@ -211,7 +211,7 @@ details.more .answer-main{margin-top:0;border-left-color:var(--line)}
 #sloganFeedback .chron-box{margin-top:10px}
 @media(max-width:760px){.say-box{grid-template-columns:1fr}.daily-card{flex-direction:column;align-items:stretch;gap:10px}.daily-card h3{white-space:normal}.daily-card .primary-btn.full{width:100%}.module-grid{grid-template-columns:1fr}.tier-cards{grid-template-columns:1fr}}
 
-/* Beta 0.22 · Arena, Boss, Bootcamp, Fallen entschlackt */
+/* Beta 0.23 · Arena, Boss, Bootcamp, Fallen entschlackt */
 .ai-demo-badge,.arena-tech-note,.boss-badge{display:none}
 .opponent-picker{padding:18px 20px}
 .opponent-picker .eyebrow{margin-bottom:10px}
@@ -252,7 +252,7 @@ details.more .answer-main{margin-top:0;border-left-color:var(--line)}
 .go-card{display:block;margin-top:12px;padding:0;text-align:left;font-size:13.5px}
 #formFeedback .primary-btn{margin-top:14px}
 
-/* Beta 0.22 · Analogien */
+/* Beta 0.23 · Analogien */
 .analogy{margin-top:14px;border:1px solid rgba(114,217,255,.22);background:rgba(114,217,255,.05);border-radius:12px;padding:13px 15px}
 .analogy span{display:block;font-size:12px;letter-spacing:.09em;font-weight:900;color:var(--cyan)}
 .analogy p{margin:6px 0 0;color:#e3f4fc;font-size:16px;line-height:1.5}
@@ -271,7 +271,7 @@ details.more .answer-main{margin-top:0;border-left-color:var(--line)}
 #decideFeedback .primary-btn{margin-top:14px}
 @media(max-width:760px){.def-row{grid-template-columns:1fr;gap:8px}}
 
-/* Beta 0.22 · Lesbarkeit, Tastatur, helle Ansicht */
+/* Beta 0.23 · Lesbarkeit, Tastatur, helle Ansicht */
 :focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:6px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .theme-btn{margin-top:10px;width:100%;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:10px;padding:9px 10px;font-size:12px;font-weight:700;cursor:pointer}
@@ -282,7 +282,7 @@ details.more .answer-main{margin-top:0;border-left-color:var(--line)}
 .current-top{flex-wrap:wrap;gap:6px}
 @media(max-width:760px){.topbar{justify-content:flex-start}.topbar-title{flex:1}.topbar .eyebrow{display:none}.topbar{min-height:0;padding:14px 16px}.topbar h1{font-size:21px;margin:0}.level-pill{font-size:12px}}
 
-/* Beta 0.22 · Navigation */
+/* Beta 0.23 · Navigation */
 .tier-tabs{margin:0 0 18px;gap:8px}
 .tier-tabs button{padding:11px 18px;font-size:14px}
 .tier-question{font-size:17px;margin:0 0 12px;letter-spacing:-.01em}
@@ -301,6 +301,13 @@ details.more .answer-main{margin-top:0;border-left-color:var(--line)}
 .sidebar-close{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--text);font-size:24px;line-height:1;cursor:pointer}
 .secondary-btn:disabled{opacity:.5;cursor:not-allowed}
 @media(max-width:760px){.tier-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.tier-tabs button{padding:10px 4px;font-size:13px}.hero-actions .primary-btn{width:100%}}
+
+/* Beta 0.23 · Rückmeldung */
+.result{margin-top:16px;padding:11px 15px;border-radius:11px;font-weight:800;font-size:14.5px;border:1px solid var(--line);line-height:1.4}
+.result.ok,.result.near{color:var(--good);border-color:var(--good)}
+.result.no{color:var(--text);border-color:var(--warn)}
+.trap-buttons button.near{border-color:var(--good)}
+.jump-note{margin:-6px 0 14px;color:var(--muted);font-size:13.5px}
 
 /* ===== helle Ansicht (automatisch aus der dunklen abgeleitet) ===== */
 html[data-theme="light"]{--bg:#f3f5f8;--bg2:#ffffff;--panel:#ffffff;--panel2:#f7f9fb;--line:#d3dbe4;--text:#0e1822;--muted:#4f6070;--accent:#4c6200;--accent2:#3c4e00;--cyan:#0a6a8f;--good:#0c7442;--warn:#855e00;--bad:#b02138;--shadow:0 14px 40px rgba(20,35,50,.10)}
@@ -533,7 +540,7 @@ html[data-theme="light"] .boss-options button.selected{background:var(--accent);
         <div class="brand-mark">!</div>
         <div>
           <div class="brand-title">Gegen Antisemitismus</div>
-          <div class="brand-subtitle">TRAINER · BETA 0.22</div>
+          <div class="brand-subtitle">TRAINER · BETA 0.23</div>
         </div>
       </div>
 
@@ -667,6 +674,7 @@ html[data-theme="light"] .boss-options button.selected{background:var(--accent);
         </div>
         <div id="campModule" class="hidden">
           <button class="back-bar" id="moduleBack">← Zurück</button>
+          <p class="jump-note hidden" id="jumpNote"></p>
           <div id="moduleStage" class="module-stage panel hidden"></div>
         </div>
       </section>
@@ -809,7 +817,7 @@ KÄMPFE</span></div>
       </section>
 
       <section class="screen" id="screen-progress">
-        <div class="section-intro"><div><div class="eyebrow">MEIN TRAININGSSTAND</div><h2>Dein Profil bewertet Fähigkeiten, nicht politische Positionen.</h2><p>Alle Werte stammen aus deinen eigenen Antworten. Sie werden nur auf diesem Gerät gespeichert.</p></div></div>
+        <div class="section-intro"><div><div class="eyebrow">MEIN TRAININGSSTAND</div><h2>Dein Profil bewertet Fähigkeiten, nicht politische Positionen.</h2><p>Alle Werte stammen aus deinen eigenen Antworten und bleiben auf diesem Gerät. Niedrige Werte am Anfang sind normal: Die Fragen sind absichtlich knifflig, und gelernt wird aus der Auflösung.</p></div></div>
         <div class="stats-grid">
           <div class="big-stat panel"><span>🔍</span><strong>–</strong><small>Erkennen</small><div class="bar"><span style="width:0%"></span></div></div>
           <div class="big-stat panel"><span>🥊</span><strong>–</strong><small>Reagieren</small><div class="bar"><span style="width:0%"></span></div></div>
@@ -855,7 +863,7 @@ KÄMPFE</span></div>
         <div class="source-note panel"><strong>Methodenhinweis:</strong> Institutionelle Quellen sind nicht „neutral, weil Institution“. Sie eignen sich für unterschiedliche Zwecke. Der Trainer soll deshalb kennzeichnen, ob ein Link den <em>Wortlaut</em>, einen <em>zeitgenössischen Befund</em>, eine <em>Definition</em> oder eine <em>spätere Einordnung</em> liefert.</div>
       </section>
 
-      <footer class="footer"><span>Beta 0.22 · spielbare Produktbeta</span><span>Klare Haltung · faire Unterscheidung · geprüfte Quellen</span></footer>
+      <footer class="footer"><span>Beta 0.23 · spielbare Produktbeta</span><span>Klare Haltung · faire Unterscheidung · geprüfte Quellen</span></footer>
     </main>
   </div>
   <script>
@@ -1558,7 +1566,7 @@ const formReact=[
   {go:['prejudice','Code-Sprache'],ask:'„Wer genau sind ‚die Globalisten‘ – kannst du Namen und Entscheidungen nennen?“',reply:'„Das Wort ersetzt nur ‚die Juden‘. Die Geschichte von der geheimen Weltkontrolle ist dieselbe wie vor hundert Jahren.“'}
 ];
 formsQuiz.forEach((q,i)=>Object.assign(q,formReact[i]||{}));
-function goToCard(deck,family){const k=cardDecks[deck],i=k.data.findIndex(c=>c.family===family);if(i<0)return;state[k.idx]=i;persist();openModule(deck);}
+function goToCard(deck,family){const k=cardDecks[deck],i=k.data.findIndex(c=>c.family===family);if(i<0)return;state[k.idx]=i;persist();state.returnTo={from:'forms',target:deck};openModule(deck);setLast('forms');}
 
 const analogies={
   'Verschwörungsmythos':'Das ist, als würdest du sagen: Drei Bäcker in der Stadt heißen Müller – also kontrollieren die Müllers das Brot.',
@@ -1646,7 +1654,7 @@ function renderDecide(){
     const ok=b.dataset.decide===q.best,last=state.decideIndex>=decideCases.length-1;
     $$('[data-decide]').forEach(x=>{x.disabled=true;if(x.dataset.decide===q.best)x.classList.add('correct');});if(!ok)b.classList.add('wrong');
     const fb=$('#decideFeedback');fb.classList.remove('hidden');
-    fb.innerHTML=`<div class="slogan-verdict ${q.best==='talk'?'ok':q.best==='limit'?'grey':'red'}">${decideLabels[q.best]}</div><div class="answer-main"><span>WARUM?</span><p>${q.why}</p></div><div class="say-box one"><div><span>WAS DU JETZT TUST</span><p>${q.now}</p></div></div><details class="more"><summary>Quellen</summary>${sourcesHtml(q.sources)}</details><button class="primary-btn" id="nextDecide">${last?'Von vorn':'Nächste Situation'}</button>`;
+    fb.innerHTML=`${resultHtml(ok,false,decideLabels[q.best])}<div class="answer-main"><span>WARUM?</span><p>${q.why}</p></div><div class="say-box one"><div><span>WAS DU JETZT TUST</span><p>${q.now}</p></div></div><details class="more"><summary>Quellen</summary>${sourcesHtml(q.sources)}</details><button class="primary-btn" id="nextDecide">${last?'Von vorn':'Nächste Situation'}</button>`;
     record('decide',ok);if(ok)bumpXP(15);
     $('#nextDecide').onclick=()=>{state.decideIndex=last?0:state.decideIndex+1;persist();renderDecide();$('#moduleStage').scrollIntoView({behavior:'smooth',block:'start'});};
   });
@@ -1670,7 +1678,7 @@ function showScreen(name){
   $$('.screen').forEach(x=>x.classList.remove('active'));
   const target=$(`#screen-${name}`); if(target) target.classList.add('active');
   $$('.nav-item').forEach(x=>x.classList.toggle('active',x.dataset.screen===(SCREEN_TIER[name]?'camp':name)));
-  if(name==='camp')closeModule();
+  if(name==='camp'){state.returnTo=null;closeModule();}
   if(name==='home')refreshContinue();
   if($('#screenTitle')) $('#screenTitle').textContent=titles[name]||name;
   $('#sidebar')?.classList.remove('open');
@@ -1725,11 +1733,11 @@ function renderTrap(){
   $$('[data-trap]').forEach(b=>b.onclick=()=>answerTrap(b.dataset.trap,b));
 }
 function answerTrap(ans,btn){
-  const t=traps[state.trapIndex],ok=ans===t.answer;
-  $$('.trap-buttons button').forEach(x=>{x.disabled=true;if(x.dataset.trap===t.answer)x.classList.add('correct');});if(!ok)btn.classList.add('wrong');
+  const t=traps[state.trapIndex],ok=ans===t.answer,near=isNear(ans,t.answer);
+  $$('.trap-buttons button').forEach(x=>{x.disabled=true;if(x.dataset.trap===t.answer)x.classList.add('correct');});if(!ok)btn.classList.add(near?'near':'wrong');
   const fb=$('#trapFeedback');fb.classList.remove('hidden');
-  fb.innerHTML=`<div class="steps3"><div><span>WAS STIMMT?</span><p>${t.core}</p></div><div><span>WAS FEHLT?</span><p>${t.missing}</p></div><div><span>WO SPRINGT DIE LOGIK?</span><p>${t.jump}</p></div></div><div class="slogan-verdict grey">Technik: ${t.tech}</div>${sourcesHtml(t.sources)}<button class="primary-btn" id="nextTrap">${state.trapIndex<traps.length-1?'Nächste Falle':'Von vorn'}</button>`;
-  record('traps',ok);if(ok)bumpXP(18);
+  fb.innerHTML=`${resultHtml(ok,near,answerLabels[t.answer])}<div class="steps3"><div><span>WAS STIMMT?</span><p>${t.core}</p></div><div><span>WAS FEHLT?</span><p>${t.missing}</p></div><div><span>WO SPRINGT DIE LOGIK?</span><p>${t.jump}</p></div></div><div class="slogan-verdict grey">Technik: ${t.tech}</div>${sourcesHtml(t.sources)}<button class="primary-btn" id="nextTrap">${state.trapIndex<traps.length-1?'Nächste Falle':'Von vorn'}</button>`;
+  record('traps',ok||near);if(ok||near)bumpXP(18);
   $('#nextTrap').onclick=()=>{state.trapIndex=state.trapIndex<traps.length-1?state.trapIndex+1:0;renderTrap();};
 }
 
@@ -1748,13 +1756,16 @@ function renderCards(key){
   stage.innerHTML=`<div class="module-stage-head"><div><div class="eyebrow">${k.eyebrow} · ${state[k.idx]+1}/${k.data.length}</div><h2>${k.title}</h2></div><span class="tag warn">${t.family}</span></div>${k.guide(false)}<div class="claim-big">${t.claim}</div><div class="trap-buttons"><button data-card="correct">✓ weitgehend korrekt</button><button data-card="partial">△ wahrer Kern, Kontext fehlt</button><button data-card="false">✗ falsch / unbelegt</button><button data-card="manip">⚠ rhetorisches Manöver</button></div><div id="mythFeedback" class="hidden"></div>`;
   $$('[data-card]').forEach(b=>b.onclick=()=>answerCard(key,b.dataset.card,b));
 }
+const answerLabels={correct:'weitgehend korrekt',partial:'wahrer Kern, Kontext fehlt',false:'falsch / unbelegt',manip:'rhetorisches Manöver'};
+function resultHtml(ok,near,label){return ok?`<div class="result ok">✓ Richtig: ${label}</div>`:near?`<div class="result near">✓ Richtig erkannt. Genauer gesagt: ${label}</div>`:`<div class="result no">Nicht ganz – die Lösung ist: ${label}</div>`;}
+function isNear(ans,sol){return ans!==sol&&['false','manip'].includes(ans)&&['false','manip'].includes(sol);}
 function answerCard(key,ans,btn){
-  const k=cardDecks[key],t=k.data[state[k.idx]],ok=ans===t.answer,last=state[k.idx]>=k.data.length-1;
+  const k=cardDecks[key],t=k.data[state[k.idx]],ok=ans===t.answer,near=isNear(ans,t.answer),last=state[k.idx]>=k.data.length-1;
   $$('.trap-buttons button').forEach(x=>{x.disabled=true;if(x.dataset.card===t.answer)x.classList.add('correct');});
-  if(!ok)btn.classList.add('wrong');
+  if(!ok)btn.classList.add(near?'near':'wrong');
   const fb=$('#mythFeedback');fb.classList.remove('hidden');
-  fb.innerHTML=`<div class="answer-main"><span>KURZ GESAGT</span><p>${t.missing}</p></div>${t.analogy?`<div class="analogy"><span>ZUGESPITZT</span><p>${t.analogy}</p>${t.fallacy?'<small>Der Denkfehler: '+t.fallacy+'</small>':''}</div>`:''}<div class="say-box"><div><span>ERST FRAGEN</span><p>${t.ask}</p></div><div><span>DANN EINORDNEN</span><p>${t.reply}</p></div></div><details class="more"><summary>Mehr dazu: wahrer Kern, Logikfehler, Einordnung, Quellen</summary><div class="trap-deconstruction"><div><span>WAS STIMMT?</span><p>${t.core}</p></div><div><span>WO SPRINGT DIE LOGIK?</span><p>${t.jump}</p></div><div><span>EINORDNUNG · ${t.d.toUpperCase()}</span><p>${t.origin}</p></div><div><span>SO SÄHE LEGITIME KRITIK AUS</span><p>${t.legit}</p></div></div>${sourcesHtml(t.sources)}</details><button class="primary-btn" id="nextCard">${last?'Von vorn':k.next}</button>`;
-  record(key,ok);if(ok)bumpXP(20);
+  fb.innerHTML=`${resultHtml(ok,near,answerLabels[t.answer])}<div class="answer-main"><span>KURZ GESAGT</span><p>${t.missing}</p></div>${t.analogy?`<div class="analogy"><span>ZUGESPITZT</span><p>${t.analogy}</p>${t.fallacy?'<small>Der Denkfehler: '+t.fallacy+'</small>':''}</div>`:''}<div class="say-box"><div><span>ERST FRAGEN</span><p>${t.ask}</p></div><div><span>DANN EINORDNEN</span><p>${t.reply}</p></div></div><details class="more"><summary>Mehr dazu: wahrer Kern, Logikfehler, Einordnung, Quellen</summary><div class="trap-deconstruction"><div><span>WAS STIMMT?</span><p>${t.core}</p></div><div><span>WO SPRINGT DIE LOGIK?</span><p>${t.jump}</p></div><div><span>EINORDNUNG · ${t.d.toUpperCase()}</span><p>${t.origin}</p></div><div><span>SO SÄHE LEGITIME KRITIK AUS</span><p>${t.legit}</p></div></div>${sourcesHtml(t.sources)}</details><button class="primary-btn" id="nextCard">${last?'Von vorn':k.next}</button>`;
+  record(key,ok||near);if(ok||near)bumpXP(20);
   $('#nextCard').onclick=()=>{state[k.idx]=last?0:state[k.idx]+1;persist();renderCards(key);$('#moduleStage').scrollIntoView({behavior:'smooth',block:'start'});};
 }
 function renderMyth(){renderCards('myths');}
@@ -1772,7 +1783,7 @@ function answerSlogan(ans,btn){
   $$('.trap-buttons button').forEach(x=>{x.disabled=true;if(x.dataset.slogan===t.answer)x.classList.add('correct');});
   if(!ok)btn.classList.add('wrong');
   const fb=$('#sloganFeedback');fb.classList.remove('hidden');
-  fb.innerHTML=`<div class="slogan-verdict ${t.answer}">${sloganLabels[t.answer]}</div><div class="answer-main"><span>WAS BEDEUTET DAS?</span><p>${t.meaning}</p></div>${t.analogy?`<div class="analogy"><span>ZUGESPITZT</span><p>${t.analogy}</p>${t.fallacy?'<small>Der Denkfehler: '+t.fallacy+'</small>':''}</div>`:''}<div class="say-box one"><div><span>SO REAGIERST DU</span><p>${t.react}</p></div></div><div class="chron-box"><span>RECHTSLAGE</span><p>${t.law}</p></div><details class="more"><summary>Mehr dazu: Einordnung und Quellen</summary><div class="answer-main"><p>${t.why}</p></div>${sourcesHtml(t.sources)}</details><button class="primary-btn" id="nextSlogan">${last?'Von vorn':'Nächste Parole'}</button>`;
+  fb.innerHTML=`${resultHtml(ok,false,sloganLabels[t.answer])}<div class="answer-main"><span>WAS BEDEUTET DAS?</span><p>${t.meaning}</p></div>${t.analogy?`<div class="analogy"><span>ZUGESPITZT</span><p>${t.analogy}</p>${t.fallacy?'<small>Der Denkfehler: '+t.fallacy+'</small>':''}</div>`:''}<div class="say-box one"><div><span>SO REAGIERST DU</span><p>${t.react}</p></div></div><div class="chron-box"><span>RECHTSLAGE</span><p>${t.law}</p></div><details class="more"><summary>Mehr dazu: Einordnung und Quellen</summary><div class="answer-main"><p>${t.why}</p></div>${sourcesHtml(t.sources)}</details><button class="primary-btn" id="nextSlogan">${last?'Von vorn':'Nächste Parole'}</button>`;
   record('slogans',ok);if(ok)bumpXP(20);
   $('#nextSlogan').onclick=()=>{state.sloganIndex=last?0:state.sloganIndex+1;persist();renderSlogan();$('#moduleStage').scrollIntoView({behavior:'smooth',block:'start'});};
 }
@@ -1788,7 +1799,7 @@ function renderForms(){
     $$('[data-form]').forEach(x=>{x.disabled=true;if(x.dataset.form===q.best)x.classList.add('correct');});if(!ok)b.classList.add('wrong');
     const fb=$('#formFeedback');fb.classList.remove('hidden');
     const deckName={myths:'Mythen-Check',prejudice:'Vorurteile gegen Juden'};
-    fb.innerHTML=`<div class="slogan-verdict ${q.best==='none'?'ok':'red'}">${formKinds[q.best].label}</div><div class="answer-main"><span>WARUM?</span><p>${q.why}</p></div>${q.note?`<div class="say-box one"><div><span>SO REAGIERST DU</span><p>${q.note}</p></div></div>`:`<div class="say-box"><div><span>ERST FRAGEN</span><p>${q.ask}</p></div><div><span>DANN EINORDNEN</span><p>${q.reply}</p></div></div>`}${q.go?`<button class="text-btn go-card" id="goCard">Ganze Karte dazu: ${deckName[q.go[0]]} · ${q.go[1]} →</button>`:''}<details class="more"><summary>Mehr dazu: die Form und Quellen</summary><div class="answer-main"><p>${formKinds[q.best].def}</p></div>${sourcesHtml(q.sources)}</details><button class="primary-btn" id="nextForm">${last?'Von vorn':'Nächste Aussage'}</button>`;
+    fb.innerHTML=`${resultHtml(ok,false,formKinds[q.best].label)}<div class="answer-main"><span>WARUM?</span><p>${q.why}</p></div>${q.note?`<div class="say-box one"><div><span>SO REAGIERST DU</span><p>${q.note}</p></div></div>`:`<div class="say-box"><div><span>ERST FRAGEN</span><p>${q.ask}</p></div><div><span>DANN EINORDNEN</span><p>${q.reply}</p></div></div>`}${q.go?`<button class="text-btn go-card" id="goCard">Ausführliche Karte dazu im Modul „${deckName[q.go[0]]}“ ansehen →</button>`:''}<details class="more"><summary>Mehr dazu: die Form und Quellen</summary><div class="answer-main"><p>${formKinds[q.best].def}</p></div>${sourcesHtml(q.sources)}</details><button class="primary-btn" id="nextForm">${last?'Von vorn':'Nächste Aussage'}</button>`;
     if(q.go)$('#goCard').onclick=()=>goToCard(q.go[0],q.go[1]);
     record('forms',ok);if(ok)bumpXP(15);
     $('#nextForm').onclick=()=>{state.formIndex=last?0:state.formIndex+1;persist();renderForms();$('#moduleStage').scrollIntoView({behavior:'smooth',block:'start'});};
@@ -1910,7 +1921,7 @@ $('#resetDemo')?.addEventListener('click',()=>{if(!confirm('Wirklich den gesamte
 
 renderGlossary();renderOpponentPicker();startChat();renderBoss();refreshProgress();
 
-/* ===== Beta 0.22 · Stufen-Tabs, eigene Modulansicht, Weitertrainieren ===== */
+/* ===== Beta 0.23 · Stufen-Tabs, eigene Modulansicht, Weitertrainieren ===== */
 const TIER_NAMES={erkennen:'Erkennen',reagieren:'Reagieren',hintergrund:'Hintergrund'};
 const SCREEN_TIER={boss:'reagieren',accusations:'reagieren',glossary:'reagieren',context:'hintergrund',sources:'hintergrund'};
 const MODULE_POS={forms:['formIndex',()=>formsQuiz.length],prejudice:['prejudiceIndex',()=>prejudices.length],myths:['mythIndex',()=>myths.length],slogans:['sloganIndex',()=>slogans.length],decide:['decideIndex',()=>decideCases.length],rhetoric:['rhetoricIndex',()=>rhetoricDrills.length],accusations:['accusationIndex',()=>accusations.length],boss:['bossIndex',()=>bossFights.length],facts:['factIndex',()=>factModules.length],traps:['trapIndex',()=>traps.length],terms:['termIndex',()=>termsQuiz.length],sourcequiz:['sourceQuizIndex',()=>sourceQuiz.length]};
@@ -1925,7 +1936,10 @@ function closeModule(){$('#campModule')?.classList.add('hidden');$('#campList')?
 function enterModule(name){
   const t=tierOf(name);showTier(t);
   $('#campList')?.classList.add('hidden');$('#campIntro')?.classList.add('hidden');$('#campModule')?.classList.remove('hidden');
-  const b=$('#moduleBack');if(b)b.textContent=`← Zurück zu ${TIER_NAMES[t]}`;
+  if(state.returnTo&&state.returnTo.target!==name)state.returnTo=null;
+  const b=$('#moduleBack'),note=$('#jumpNote'),ret=state.returnTo;
+  if(b)b.textContent=ret?`← Zurück zu ${moduleCard(ret.from).querySelector('h3').textContent}`:`← Zurück zu ${TIER_NAMES[t]}`;
+  if(note){note.classList.toggle('hidden',!ret);if(ret)note.textContent=`Du bist jetzt im Modul „${moduleCard(name).querySelector('h3').textContent}“, bei der ausführlichen Karte zu dieser Aussage.`;}
 }
 function setLast(name){save.last=name;persist();}
 function goToLast(){
@@ -1945,7 +1959,7 @@ function updateAnalyzeBtn(){const b=$('#chatAnalyze');if(!b)return;const n=state
 $$('[data-tab]').forEach(b=>b.addEventListener('click',()=>showTier(b.dataset.tab)));
 $$('[data-tier]').forEach(b=>b.addEventListener('click',()=>{showScreen('camp');showTier(b.dataset.tier);}));
 $$('[data-back]').forEach(b=>b.addEventListener('click',()=>{showScreen('camp');showTier(b.dataset.back);}));
-$('#moduleBack')?.addEventListener('click',()=>{closeModule();window.scrollTo({top:0});});
+$('#moduleBack')?.addEventListener('click',()=>{if(state.returnTo){const f=state.returnTo.from;state.returnTo=null;openModule(f);return;}closeModule();window.scrollTo({top:0});});
 $('#heroContinue')?.addEventListener('click',()=>{if(save.last)goToLast();else{showScreen('camp');showTier('erkennen');}});
 $('#heroOther')?.addEventListener('click',()=>{showScreen('camp');});
 $$('.module-card[data-goto]').forEach(c=>c.addEventListener('click',()=>setLast(c.dataset.goto)));
